@@ -1,0 +1,26 @@
+.root {
+    display: table;
+    width: 100%;
+}
+
+.wrapper {
+    display: table-row;
+}
+
+.left {
+    display: table-cell;
+    width: 50%;
+    padding: 1em;
+}
+
+.right {
+    display: table-cell;
+    width: 50%;
+    padding: 1em;
+}
+
+#css,
+#js {
+    height: 40em;
+    width: 90%;
+}

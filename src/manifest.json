@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "version": "1.0.3",
+    "name": "Custom Stylesheet & Script",
+    "description": "Inserts a custom stylesheet and script into every web page.",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "permissions": [
+        "storage",
+        "*://*/"
+    ],
+    "options_page": "options.html",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["jquery-2.1.0.min.js", "content_script.js"],
+            "run_at": "document_start"
+        }
+    ]
+}
