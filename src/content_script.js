@@ -2,9 +2,16 @@ chrome.storage.sync.get({
     css: "",
     js: ""
 }, function(items) {
-    eval(items.js);
+    try {
+        eval(items.js);
+    } catch (e) {
+        console.error(e);
+    }
     chrome.runtime.sendMessage({
         action: "insertCSS",
-        code: items.css
+        details: {
+            code: items.css,
+            allFrames: true
+        }
     });
 });
