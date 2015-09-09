@@ -8,6 +8,6 @@
     font-size: 100%;
 }
 
-.cs-twitter body {
-    font-family: sans-serif !important;
+.my-custom-class {
+    font-family: "Comic Sans MS";
 }
