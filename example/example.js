@@ -17,7 +17,7 @@ function addCustomClassToHtml(urlClass) {
     var url = window.location.href;
     for (var i = 0; i < urlClass.length; i++) {
         if (urlClass[i][0].test(url)) {
-            document.documentElement.className += urlClass[i][1];
+            document.documentElement.className += " " + urlClass[i][1];
         }
     }
 }
