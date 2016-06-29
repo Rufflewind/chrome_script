@@ -11,6 +11,8 @@ function main() {
     undisablePasswordPasting([
         /https:\/\/(\w+\.)?example\.com\//
     ]);
+
+    hideableHangoutsThumbnails();
 }
 
 function addCustomClassToHtml(urlClass) {
@@ -77,6 +79,28 @@ function undisablePasswordPasting(urls) {
             );
         }
     }
+}
+
+function hideableHangoutsThumbnails() {
+    if (!/hangouts\.google\.com/.test(window.location.href)) {
+        return;
+    }
+    window.addEventListener("keyup", function(e) {
+        if (e.key != "F7") {
+            return;
+        }
+        var elem = document.getElementsByClassName('KMD69e-Wa');
+        console.log(elem);
+        if (!elem) {
+            return;
+        }
+        elem = elem[0];
+        if (elem.style.display == "none") {
+            elem.style.display = "";
+        } else {
+            elem.style.display = "none";
+        }
+    });
 }
 
 main();
