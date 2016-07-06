@@ -89,12 +89,13 @@ function hideableHangoutsThumbnails() {
         if (e.key != "F7") {
             return;
         }
-        var elem = document.getElementsByClassName('KMD69e-Wa');
+        var elem =
+            document.getElementsByClassName('KMD69e-Wa')[0] ||
+            document.getElementsByClassName('Wa')[0];
         console.log(elem);
         if (!elem) {
             return;
         }
-        elem = elem[0];
         if (elem.style.display == "none") {
             elem.style.display = "";
         } else {
