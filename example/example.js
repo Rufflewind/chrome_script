@@ -13,6 +13,8 @@ function main() {
     ]);
 
     hideableHangoutsThumbnails();
+
+    hideableHangoutsScreenshareBanner();
 }
 
 function addCustomClassToHtml(urlClass) {
@@ -86,13 +88,32 @@ function hideableHangoutsThumbnails() {
         return;
     }
     window.addEventListener("keyup", function(e) {
-        if (e.key != "F7") {
+        if (!(e.key == "F7" && !e.shiftKey)) {
             return;
         }
         var elem =
             document.getElementsByClassName('KMD69e-Wa')[0] ||
             document.getElementsByClassName('Wa')[0];
-        console.log(elem);
+        if (!elem) {
+            return;
+        }
+        if (elem.style.display == "none") {
+            elem.style.display = "";
+        } else {
+            elem.style.display = "none";
+        }
+    });
+}
+
+function hideableHangoutsScreenshareBanner() {
+    if (!/hangouts\.google\.com/.test(window.location.href)) {
+        return;
+    }
+    window.addEventListener("keyup", function(e) {
+        if (!(e.key == "F7" && e.shiftKey)) {
+            return;
+        }
+        var elem = document.getElementById(':st.zu');
         if (!elem) {
             return;
         }
