@@ -1,27 +1,59 @@
-html, body, .root, #css, #js {
+html, body, #status, #root, #css, #js {
     height: 100%;
     width: 100%;
     margin: 0;
+}
+
+html, body, #status, #root {
     padding: 0;
 }
 
-.root {
-    display: table;
-    table-layout: fixed;
-    border-spacing: 1.5em;
+#root {
+    display: flex;
+    flex-direction: column;
 }
 
-.wrapper {
-    display: table-row;
+header {
+    height: 1.5em;
+    margin: 15px 15px 0 15px;
 }
 
-.left, .right {
-    display: table-cell;
+textarea {
+    box-sizing: border-box;
+    padding: 0.5em;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+#left, #right {
     width: 100%;
 }
 
-#css, #js {
-    resize: none;
-    padding: .3em;
-    box-sizing: border-box;
+#left {
+    margin: 15px 0 15px 15px;
+}
+
+#right {
+    margin: 15px;
+}
+
+.wait header {
+    font-weight: bold;
+}
+
+.ok header {
+    color: #758275;
+}
+
+.err header {
+    color: #e23109;
+    font-weight: bold;
+}
+
+.err textarea {
+    background: #efb1ae;
 }
