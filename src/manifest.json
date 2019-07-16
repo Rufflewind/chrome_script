@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "version": "1.0.7",
+    "version": "2.0.0",
     "name": "Custom Stylesheet & Script",
     "description": "Inserts a custom stylesheet and script into every web page.",
     "icons": {
@@ -20,7 +20,7 @@
     "content_scripts": [
         {
             "matches": ["*://*/*"],
-            "js": ["jquery-2.1.4.min.js", "content_script.js"],
+            "js": ["content_script.js"],
             "run_at": "document_start"
         }
     ]

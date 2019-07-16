@@ -21,8 +21,7 @@ To edit the script and stylesheet, go to *chrome://extensions* and click
 The text areas in the *Options* tab will automatically save as you edit.
 Existing pages are not affected until refreshed.
 
-For convenience, [jQuery 2.1.0][2] is included and can be used in the custom
-script.
+Note: jQuery is no longer included and cannot be used in the custom script
+anymore.
 
 [1]: https://chrome.google.com/webstore/detail/hojkciooaohipljgobfikbkjcehockld
-[2]: http://jquery.com
